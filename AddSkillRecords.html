@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+</style></div>
+<div>
+    <div style="margin-top: 15px">
+        <p id="p1" class="paragraph1"></p><p id="p2" class="paragraph1">
+    </p></div>
+    <style type="text/css">
+textarea {
+ width: 410px; height: 250px; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+	</style>
+    <textarea id="xml" rows="20" cols="50"></textarea> 
+     <p> </p>
+    <button onclick="AddSkillRecord()">Add Skill Record</button>
+        <script type="text/javascript">
+        var version = 1.0;
+        document.getElementById("xml").value += "<Here's Ya Skil Recads>\n";
+
+        function AddSkillRecord(){
+            var id = prompt("Please enter Skill ID", "000");
+            var bgimg = prompt("Please enter Background Image", "ssX*");
+            var skillname = prompt("Please enter Skill Name", "[New Skill] Person");
+            var skilllevel = prompt("Please enter Skill Level", "100");
+            var limitbreaks = prompt("Please enter Limit Breaks", "10");
+            var equipment = prompt("Please enter Equipment", "1H Typewriter");
+            var cost = prompt("Please enter Slot Cost", "16");
+            var attack = prompt("Please enter Attack", "-");
+            var defense = prompt("Please enter Defense", "-");
+            var bonushp = prompt("Please enter Bonus HP", "-");
+            var element = prompt("Please enter Element", "Slash/Fire");
+            var spcost = prompt("Please enter SP Cost", "30");
+            var effect = prompt("Please enter Effect", "[Place Holder 4] Your skill records will be entered automatically.");
+            var str = "<img src=\"./SAO IF ASSETS/Character/sr_icon_l_6000" + id +".png\" id=\"sr" + id + "\" alt=\"" + id + "\" onclick=\"makeskill('" + id + "', '" + bgimg + "', '" + skillname +"', " + skilllevel +", " + limitbreaks + ", '" + equipment + "', " + cost +", '" + attack + "', '" + defense + "', '" + bonushp + "', '" + element + "', '" + spcost + "', '" + effect + "')\" height=\"150\" width=\"150\">\n";
+            document.getElementById("xml").value += str; 
+        }
+
+function toggleoutputvisibility() {
+        var display = document.getElementById('output').style.display;
+        if(display == "none")
+              document.getElementById('output').style.display = "block";
+     }
+        function CompileLevelXML() {
+    var str = document.getElementById("xml").value;
+    toggleoutputvisibility();
+        document.getElementById("output").value += str;
+		}
+//Asuki says Hai!
+    </script>
+    <style>
+        p {
+            color: Blue;
+        }
+        .paragraph1 {
+            font-size: 12px;
+             font-family: Verdana, Arial, Helvetica, sans-serif;
+            line-height: 2px;
+        }
+        .paragraph2 {
+            font-size: 13px;
+             font-family: Verdana, Arial, Helvetica, sans-serif;
+        }
+    </style>
+</body></html>
