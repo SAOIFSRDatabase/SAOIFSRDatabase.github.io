@@ -173,6 +173,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.clickable {
+    cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -259,7 +262,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <img src="./SAO IF ASSETS/Character/sr_icon_l_6000232.png" id="gunnerscompassion" alt="232" onclick="makeskill(232, 'ss4s', '[Gunner\'s Compassion] Sachi', 100, 10, '2H Spear', 20, '-', '-', '-', 'Slash/Wind', 22, '720% damage (All Foes) [Front/Arc/Mid]/[Weak Slash 4/Debuff] Slash elements\'s weakness damage +25% for 8sec.')" height="150" width="150">
 <img src="./SAO IF ASSETS/Character/sr_icon_l_6000234.png" id="floweringgarden" alt="234" onclick="makeskill(234, 'ss4s', '[Flowering Garden] Asuna', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust/Holy', 22, '740% damage (4x hit/All Foes) [Motion Range]/[Flash 4/Buff] Your own critical rate and critical damage increases 25% for 30sec. Effect will be removed with damage')" height="150" width="150">
 <img src="./SAO IF ASSETS/Character/sr_icon_l_6000235.png" id="relaxingmorning" alt="235" onclick="makeskill(235, 'a4s', '[Relaxing Morning] Asuna', 100, 10, 'Passive', 8, '55', '44', '900', '-', '-', '[Weakness Attack 4] Critical Damage +20%./[Enhance Attack 3] Attack +4%.')" height="150" width="150">
-<div id="skillinfo" class="modal">	<div id="class" class="animate-zoom">	<div id="bg" class="modal-content">	
+<div id="skillinfo" class="modal" class="clickable">	<div id="class" class="animate-zoom">	<div id="bg" class="modal-content">	
 	<span class="close"><img src="./SAO IF ASSETS/UI/exitbtn.png"></img></span>
     <div class="skillimg"><img id ="skillimg" src="" style="width:465px;height:452px;"></img>	</div>
     <div class="name" id="skillname"><p></p>	</div>
