@@ -6,10 +6,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
 @font-face { font-family: yugo; src: url('./SAO IF ASSETS/Font/yugothil.ttf'); } 
 .modal {
     display: none;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     padding-top: 100px;
-    left: 0;
+    padding: 0;
+    left: 50%;
     top: 0;
     overflow: auto;
     background-color: rgb(0,0,0);
@@ -46,7 +47,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	position: fixed;
 	width: 800px;
     height: 450px;
-    left: 300px;
+    left: 25%;
 	animation: animatezoom 0.25s
 }
 
@@ -63,7 +64,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	position: fixed;
 	width: 800px;
     height: 450px;
-    left: 300px;
+    left: 25%;
 	animation: animatezoomout 0.25s
 }
 @keyframes animatezoomout {
