@@ -14,7 +14,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0);
-
 }
 .modal-content {
 	background-image: url("");
@@ -174,9 +173,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.clickable {
-    cursor: pointer;
-}
 </style>
 </head>
 <body>
@@ -192,10 +188,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	<audio id="BGM_town_start">
 <source src="./SAO IF ASSETS/Audio/BGM_town_start.mp3" type="audio/mpeg">
 	</audio>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="prefetch" href="./SAO IF ASSETS/Character/">
 <h2>Testing Unit</h2>
-<div class="clickable">
-<img src="./SAO IF ASSETS/Character/sr_icon_l_6000018.png" id="sr018" alt="018" onclick="makeskill('018', 'ss4s', '[Striking] Asuna', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust', '25', '860% damage (8x/Single Foes) [Front/Cone/Wide] [Weak Thrust 4/Debuff] Thrust damage +25% for 8sec.')" height="150" width="150">
+<img preload="none" src="./SAO IF ASSETS/Character/sr_icon_l_6000018.png" id="sr018" alt="018" onclick="makeskill('018', 'ss4s', '[Striking] Asuna', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust', '25', '860% damage (8x/Single Foes) [Front/Cone/Wide] [Weak Thrust 4/Debuff] Thrust damage +25% for 8sec.')" height="150" width="150">
 
 <img src="./SAO IF ASSETS/Character/sr_icon_l_6000027.png" id="sr027" alt="027" onclick="makeskill('027', 'ss4s', '[Azure Pursuit] Sachi', 100, 10, '2H Spear', 16, '-', '-', '-', 'Thrust', '35', '860% damage (8x hit/All Foes) [Front/Cone/Wide] / [Precise Attack 4/Buff] Critical rate +15% for 10 sec')" height="150" width="150">
 <img src="./SAO IF ASSETS/Character/sr_icon_l_6000063.png" id="purerequest" alt="063" onclick="makeskill('063', 'a2s', '[Pure Request] Silica', 64, 4, 'Passive', 4, '30', '11', '356', '-', '-', '[Attack Up 2] Attack damage increases +9')" height="150" width="150">
@@ -264,7 +259,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <img src="./SAO IF ASSETS/Character/sr_icon_l_6000232.png" id="gunnerscompassion" alt="232" onclick="makeskill(232, 'ss4s', '[Gunner\'s Compassion] Sachi', 100, 10, '2H Spear', 20, '-', '-', '-', 'Slash/Wind', 22, '720% damage (All Foes) [Front/Arc/Mid]/[Weak Slash 4/Debuff] Slash elements\'s weakness damage +25% for 8sec.')" height="150" width="150">
 <img src="./SAO IF ASSETS/Character/sr_icon_l_6000234.png" id="floweringgarden" alt="234" onclick="makeskill(234, 'ss4s', '[Flowering Garden] Asuna', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust/Holy', 22, '740% damage (4x hit/All Foes) [Motion Range]/[Flash 4/Buff] Your own critical rate and critical damage increases 25% for 30sec. Effect will be removed with damage')" height="150" width="150">
 <img src="./SAO IF ASSETS/Character/sr_icon_l_6000235.png" id="relaxingmorning" alt="235" onclick="makeskill(235, 'a4s', '[Relaxing Morning] Asuna', 100, 10, 'Passive', 8, '55', '44', '900', '-', '-', '[Weakness Attack 4] Critical Damage +20%./[Enhance Attack 3] Attack +4%.')" height="150" width="150">
-<div id="skillinfo" class="modal" class="clickable">	<div id="class" class="animate-zoom">	<div id="bg" class="modal-content">	
+<div id="skillinfo" class="modal">	<div id="class" class="animate-zoom">	<div id="bg" class="modal-content">	
 	<span class="close"><img src="./SAO IF ASSETS/UI/exitbtn.png"></img></span>
     <div class="skillimg"><img id ="skillimg" src="" style="width:465px;height:452px;"></img>	</div>
     <div class="name" id="skillname"><p></p>	</div>
@@ -278,7 +273,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     <div class="limitbreaks" id="limitbreaks"><p></p>	</div>
     <div class="skilllevel" id="skilllevel"><p></p>	</div>
     <div class="effect" id="effect"><p></p>	</div>
-</div></div></div></div>
+</div></div></div>
 
 <script>
 var modal = document.getElementById('skillinfo');
