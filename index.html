@@ -180,8 +180,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </head>
 <body>
 	<div style="background-color: #FFFFFF;top: 100%;" id="loader">
-	<img style="display: block;margin-left: auto;margin-right: auto;width: 99%;" src="./SAO IF ASSETS/GIF/intro.gif?rand=<?=rand(1,1000);? id="intro">
-	<img style="display: block;margin-left: auto;margin-right: auto;width: 50%;padding-top:1px;" src="./SAO IF ASSETS/GIF/bar.gif?=rand(1,1000); id="bar">
+	<img style="display: block;margin-left: auto;margin-right: auto;width: 99%;" src="./SAO IF ASSETS/GIF/intro.gif" id="intro">
+	<img style="display: block;margin-left: auto;margin-right: auto;width: 50%;padding-top:1px;" src="./SAO IF ASSETS/GIF/bar.gif" id="bar">
 	<img src="./SAO IF ASSETS/UI/10k.png" style="position: relative;max-width: 100%;height: auto;" id="10k">
 </div>
 	<audio id="start">
@@ -395,6 +395,10 @@ var close = document.getElementById("close");
 var BGM_town_start = document.getElementById("BGM_town_start");
 var span = document.getElementsByClassName("close")[0];
 var loader = document.getElementById("loader");
+var intro = document.getElementById("intro");
+var bar = document.getElementById("bar");
+intro.src = "./SAO IF ASSETS/GIF/intro.gif?" + Math.floor((Math.random() * 1000) + 1);
+bar.src = "./SAO IF ASSETS/GIF/bar.gif?" + Math.floor((Math.random() * 1000) + 1);
 setTimeout(hideloader, 7000);
 function hideloader() {
 	loader.style.display = "none";
