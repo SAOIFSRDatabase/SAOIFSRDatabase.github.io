@@ -179,6 +179,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </style>
 </head>
 <body>
+	<div style="background-color: #FFFFFF;top: 100%;" id="loader">
+	<img style="display: block;margin-left: auto;margin-right: auto;width: 99%;" src="./SAO IF ASSETS/GIF/OpeningBitSAOIFAnimation3.gif" id="bar">
+	<img style="display: block;margin-left: auto;margin-right: auto;width: 50%;padding-top:1px;" src="./SAO IF ASSETS/GIF/LOADINGBAR6.gif" id="bar">
+	<img src="./SAO IF ASSETS/UI/10k.png" style="position: relative;max-width: 100%;height: auto;" id="10k">
+</div>
 	<audio id="start">
 <source src="./SAO IF ASSETS/Audio/startup.mp3" type="audio/mpeg">
 	</audio>
@@ -191,7 +196,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	<audio id="BGM_town_start">
 <source src="./SAO IF ASSETS/Audio/BGM_town_start.mp3" type="audio/mpeg">
 	</audio>
-<link rel="prefetch" href="./SAO IF ASSETS/Character/">
+<link rel="prefetch" href="./SAO IF ASSETS/">
 <h2>Testing Unit</h2>
 <img src="./SAO IF ASSETS/Character/sr_icon_l_6000009.png" id="sr009" alt="009" onclick="makeskill('009', 'ss4s', '[Vivid Strike] Kirito', 100, 10, '1H Sword', 16, '-', '-', '-', 'Slash', '26', '730% damage (5x hit/Single Foe] [Front/Cone/Mid] [Bonus] +25% damage to defense debuffed foe')" height="150" width="150">
 
@@ -366,7 +371,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 <img src="./SAO IF ASSETS/Character/sr_icon_l_6000235.png" id="relaxingmorning" alt="235" onclick="makeskill(235, 'a4s', '[Relaxing Morning] Asuna', 100, 10, 'Passive', 8, '55', '44', '900', '-', '-', '[Weakness Attack 4] Critical Damage +20%./[Enhance Attack 3] Attack +4%.')" height="150" width="150">
 
-<div id="skillinfo" class="modal">	<div id="class" class="animate-zoom">	<div id="bg" class="modal-content">	
+<div id="skillinfo" class="modal">	<div style="display: block;margin-left: auto;margin-right: auto;" id="class" class="animate-zoom">	<div style="display: block;margin-left: auto;margin-right: auto;" id="bg" class="modal-content">	
 	<span class="close"><img src="./SAO IF ASSETS/UI/exitbtn.png"></img></span>
     <div class="skillimg"><img id ="skillimg" src="" style="width:465px;height:452px;"></img>	</div>
     <div class="name" id="skillname"><p></p>	</div>
@@ -389,6 +394,12 @@ var select = document.getElementById("select");
 var close = document.getElementById("close");
 var BGM_town_start = document.getElementById("BGM_town_start");
 var span = document.getElementsByClassName("close")[0];
+var loader = document.getElementById("loader");
+setTimeout(hideloader, 5100);
+function hideloader() {
+	loader.style.display = "none";
+}
+
 function makeskill(sid, bgimg, skillname, skilllevel, limitbreaks, equipment, cost, attack, defense, bonushp, element, spcost, effect) {
 	select.play(); 
 	document.getElementById("bg").style.backgroundImage = "url\(\'./SAO IF ASSETS/Skill Backgrounds/" + bgimg + ".png'\)";
