@@ -176,6 +176,51 @@ body {font-family: Arial, Helvetica, sans-serif;}
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.modal2 {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding-top: 100px;
+    padding: 0;
+    left: 50%;
+    top: 0;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0);
+}
+.modal-content2 {
+	background-image: url("");
+    background-color: #fefefe;
+    margin: auto;
+    padding-top: 0px;
+    padding: 1px;
+    border: 1px solid #888;
+    width: 800px;
+    height: 450px;
+}
+.open {
+	background-image: url('./SAO IF ASSETS/UI/afbtn.png');
+	position:center;
+	left: 10px;
+	padding: 3px;
+    color: #aaaaaa;
+    float: right;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+}
+.open:active {
+	z-index: -1;
+	background-image: url('./SAO IF ASSETS/UI/afbtnp.png');
+	position:center;
+	left: 10px;
+	padding: 3px;
+    color: #aaaaaa;
+    float: right;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+}
 </style>
 </head>
 <body>
@@ -196,7 +241,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	<audio id="BGM_town_start">
 <source src="./SAO IF ASSETS/Audio/BGM_town_start.mp3" type="audio/mpeg">
 	</audio>
-<link rel="prefetch" href="./SAO IF ASSETS/">
+<img class="open" style="position: relative;width: 200px;height: 60px;" id="afbtn">
+<div id="1as_id">
 <h2>Testing Unit</h2>
 
 <img src="./SAO IF ASSETS/Character/sr_icon_l_6000001.png" id="sr001" alt="001" onclick="makeskill('001', 'ss1s', '[First Weapon] Kirito', 1, 0, '1H Sword', 4, '-', '-', '-', 'Slash/Fire', '10', '161% damage (Single Foe) [Front/Cone/Mid]')" height="150" width="150">
@@ -562,6 +608,372 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <img src="./SAO IF ASSETS/Character/sr_icon_l_6000234.png" id="floweringgarden" alt="234" onclick="makeskill(234, 'ss4s', '[Flowering Garden] Asuna', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust/Holy', 22, '740% damage (4x hit/All Foes) [Motion Range]/[Flash 4/Buff] Your own critical rate and critical damage increases 25% for 30sec. Effect will be removed with damage')" height="150" width="150">
 
 <img src="./SAO IF ASSETS/Character/sr_icon_l_6000235.png" id="relaxingmorning" alt="235" onclick="makeskill(235, 'a4s', '[Relaxing Morning] Asuna', 100, 10, 'Passive', 8, '55', '44', '900', '-', '-', '[Weakness Attack 4] Critical Damage +20%./[Enhance Attack 3] Attack +4%.')" height="150" width="150">
+</div>
+<div id="1des_id">
+	<img src="./SAO IF ASSETS/Character/sr_icon_l_6000235.png" id="relaxingmorning" alt="235" onclick="makeskill(235, 'a4s', '[Relaxing Morning] Asuna', 100, 10, 'Passive', 8, '55', '44', '900', '-', '-', '[Weakness Attack 4] Critical Damage +20%./[Enhance Attack 3] Attack +4%.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000234.png" id="floweringgarden" alt="234" onclick="makeskill(234, 'ss4s', '[Flowering Garden] Asuna', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust/Holy', 22, '740% damage (4x hit/All Foes) [Motion Range]/[Flash 4/Buff] Your own critical rate and critical damage increases 25% for 30sec. Effect will be removed with damage')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000233.png" id="mischievoussmile" alt="233" onclick="makeskill(233, 'a4s', '[Mischievous Smile] Argo', 100, 10, 'Passive', 8, '49', '54', '950', '-', '-', '[Enhance Attack 4] Attack +10%./[Quick Turn 4] Attack +10% for 5 sec when evasion occurs.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000232.png" id="gunnerscompassion" alt="232" onclick="makeskill(232, 'ss4s', '[Gunner\'s Compassion] Sachi', 100, 10, '2H Spear', 20, '-', '-', '-', 'Slash/Wind', 22, '720% damage (All Foes) [Front/Arc/Mid]/[Weak Slash 4/Debuff] Slash elements\'s weakness damage +25% for 8sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000231.png" id="piercinggaze" alt="231" onclick="makeskill(231, 'ss4s', '[Piercing Gaze] Sinon', 100, 10, 'Dagger', 24, '-', '-', '-', 'Slash/Fire', 30, '700% damage (8x hit/Single Foe) [Center/Arc/Mid]/[Bonus] When the player is Status Aliments (Posion, Burn, Bleed, Frostbite, Curse, Debility), Attack +50%.')" height="150" width="150"> 
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000230.png" id="marchofrage" alt="230" onclick="makeskill(230, 'a4s', '[March of Rage] Leefa', 100, 10, 'Passive', 10, '65', '38', '800', '-', '-', '[Percise Attack 4] Critical rate +16%./[Tempo Up 4] Attack increases with number of hits.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000229.png" id="lightningspeed" alt="229" onclick="makeskill(229, 'ss4s', '[Lightning Speed] Asuna', 100, 10, '1H Rapier', 24, '-', '-', '-', 'Thrust/Earth', 25, '700% damage (Single Foe) [Front/Long/Mid]/][Slash Attack Down 4/Debuff] Enemy slash attack -20% for 15sec./[Bonus] 40% increase with critical damage.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000228.png" id="cuttingedgebullet" alt="228" onclick="makeskill(228, 'ss4s', '[Cutting Edge Bullet] Kirito', 100, 10, '2H Bow', 20, '-', '-', '-', 'Thrust/Dark', 28, '860% damage (6x hit/All Foes) [Front/Long/Wide]/[Evasion 4/Buff] Evasion rate +10% for 10sec. (This will not activate with focus attack)')" height="150" width="150"> 
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000227.png" id="sr227" alt="227" onclick="makeskill('227', 'ss4s', '[Tea Party] Leefa', 100, 10, '2H Axe', 24, '-', '-', '-', 'Slash/Holy', '30', '880% damage (Single Foe) [Front/Long/Mid] / [Bonus] 25% of player\'s reduced HP is additional damage to the enemy.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000226.png" id="sr226" alt="226" onclick="makeskill('226', 'ss4s', '[Trouble Rabbit] Silica', 100, 10, '1H Club', 24, '-', '-', '-', 'Blunt/Fire', '32', '780% damage (3x hit/All Foes)[Front/Arc/Mid]/[Bonus] Removes enemy\'s +ATK when Switch activated/[Mark/Debuff] Doubles the next damages towards enemies when Switch is activated(Effective for other party member\'s attack too.)')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000225.png" id="sr225" alt="225" onclick="makeskill('225', 'a4s', '[Smile Cat] Lisbeth', 100, 10, 'Passive', 12, '55', '70', '750', '-', '-', '[Combination 4] Skill\'s power is added +75% when used in switch. / [Guardian 4] Recovers 500HP of yourself when Switch is activated')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000224.png" id="sr224" alt="224" onclick="makeskill('224', 'ss4s', '[Wonder Hat] Sinon', 100, 10, 'Bow', 24, '-', '-', '-', 'Thrust/Wind', '24', '400% damage (3x/All Foes) [Target Location/Arc/Mid] / [Optimal Range] 10m(x2.0) / [Bonus] additional damage to enemy of 25% own current HP.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000223.png" id="sr223" alt="223" onclick="makeskill('223', 'ss4s', '[Exotic Woods] Yuuki', 100, 10, '1H Sword', 24, '-', '-', '-', 'Slash/Holy', '28', '860% damage (4x hit/Single Foe) [Front/Cone/Mid] / [Bonus] Damage +25% to enemies that have a buff effect')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000222.png" id="sr222" alt="222" onclick="makeskill('222', 'ss4s', '[Sunny Hill] Asuna', 100, 10, '2H Spear', 24, '-', '-', '-', 'Slash/Fire', '32', '550% damage (4x hit/All Foes) [Center/Arc/Wide] / [Optimal Range] 5cm(x1.8) / [Bonus] Easily draw enemy aggro.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000221.png" id="sr221" alt="221" onclick="makeskill('221', 'a4s', '[Summer Memory] Koharu', 100, 10, 'Passive', 8, '44', '53', '1225', '-', '-', '[Enhance Burn Hit 4] +success rate for burn debuff / [Burn Precision Attack 4] Critical rate +24% towards opponents with burn')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000220.png" id="sr220" alt="220" onclick="makeskill('220', 'ss4s', '[Sniper Eye] Sinon', 100, 10, 'Bow', 16, '-', '-', '-', 'Thrust/Fire', '18', '700% damage (2x hit/All Foes) [Front/Arc/Mid] / [Burn/Debuff] It will Burn (Stack 3) at a specific rate for 30 sec / [Bonus] More than regular increase in switch gauge')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000219.png" id="sr219" alt="219" onclick="makeskill('219', 'ss4s', '[Night Blooming Flower] Yuuki', 100, 10, 'Dagger', 16, '-', '-', '-', 'Slash/Dark', '26', '820% damage (3x hit/Single Foe) [Front/Arc/Mid] / [Bonus] When this skill is used in switch and hits, the Bleed debuff will also affect the player. (Stack 1) / [Bleed/Debuff] Will Bleed (Stack 3) at specific rate for 30sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000218.png" id="sr218" alt="218" onclick="makeskill('218', 'a4s', '[Innocent Smile] Asuna', 100, 10, 'Passive', 8, '42', '66', '1000', '-', '-', '[Enhance Beserk 4] When the player is debuffed (Poison, Burn, Bleed, Frostbite, Curse, Debility), ATK +20% / [Enhance Clotting 4] Bleed damage reduces -30%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000217.png" id="sr217" alt="217" onclick="makeskill('217', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000216.png" id="sr216" alt="216" onclick="makeskill('216', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000215.png" id="sr215" alt="215" onclick="makeskill('215', 'ss4s', '[Midsummer Sunlight] Leefa', 100, 10, '2H Axe', 16, '-', '-', '-', 'Slash/Water', '28', '620% damage (3x hit/All Foes) [Center/Arc/Wide] / [Appropriate Distance] 1m (x1.5) / [Bonus] Easily draw enemy aggro')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000214.png" id="sr214" alt="214" onclick="makeskill('214', 'ss4s', '[Shy Seaside] Koharu', 100, 10, '1H Club', 16, '-', '-', '-', 'Blunt/Water', '28', '750% damage (5x hit/All Foes) [Front/Arc/Mid] / [PT Enhance Attack 4/Buff] Party\'s attack +15% for 20sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000213.png" id="sr213" alt="213" onclick="makeskill('213', 'ss4s', '[Radiant Seaside] Asuna', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Slash/Wind', '22', '720% damage (All Foes) [Front/Cone/Wide] / [Tough 4/Buff] Flinch resistance +80% for 10sec. / [Bonus] More than regular increase in switch guage.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000212.png" id="sr212" alt="212" onclick="makeskill('212', 'ss4s', '[Shining Sunshine] Yuuki', 100, 10, '1H Sword', 16, '-', '-', '-', 'Slash/Holy', '28', '780% damage (5x hit/Single Foe) [Front/Cone/Mid] / [Bonus] +25% damage towards enemy on break. / [Bonus] Increase in break guage amount.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000211.png" id="sr211" alt="211" onclick="makeskill('211', 'ss4s', '[Twilight Beach] Sachi', 100, 10, '2H Spear', 16, '-', '-', '-', 'Thrust/Water', '24', '740% damage (All Foes) [Front/Long/Mid] / [Weak Defense 4/Debuff] Enemy defense -30% for 10sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000210.png" id="sr210" alt="210" onclick="makeskill('210', 'a4s', '[Sunset Beach] Sinon', 100, 10, 'Passive', 10, '33', '78', '1150', '-', '-', '[Enhance Heal 4] Effect of healing items and field objects +25%. / [Resist 4] Debuff\'s (Poison, Burn, Bleed, Frostbite) Res. +10%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000209.png" id="sr209" alt="209" onclick="makeskill('209', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000208.png" id="sr208" alt="208" onclick="makeskill('208', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000207.png" id="sr207" alt="207" onclick="makeskill('207', 'ss4s', '[Flash Archer] Asuna', 90, 10, 'Bow', 12, '-', '-', '-', 'Thrust', '16', '351% damage (Single Foe) [Front/Long/Mid] / [Weak Defense 3/Debuff] Enemy defense -30% for 15sec')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000206.png" id="sr206" alt="206" onclick="makeskill('206', 'ss4s', '[Lone Wolf Bow] Sinon', 100, 10, 'Bow', 16, '-', '-', '-', 'Thrust/Holy', '24', '780% damage (3x hit/All Foes) [Front/Cone/Wide] / [Bonus] Additional damage to enemy of 20% own current HP')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000205.png" id="sr205" alt="205" onclick="makeskill('205', 'ss4s', '[Calm Archer] Sinon', 100, 10, 'Bow', 16, '-', '-', '-', 'Thrust/Wind', '24', '730% damage (All Foes) [Front/Cone/Wide] / -- Charging -- 730% Damage (All Foes) [Front/Cone/Wide] / [Precise Attack 4/Buff] Critical rate +15% for 10 sec / -- Uncharged -- 480% damage (All Foes) [Front/Long/Mid]')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000204.png" id="sr204" alt="204" onclick="makeskill('204', 'ss4s', '[Sword Breaker] Philia', 100, 10, 'Dagger', 16, '-', '-', '-', 'Slash', '24', '700% damage (3x hit/All Foes) [Motion Range] / [Bonus] When an enemy with Debuff (Posion, Burn, Bleed, Frostbite) was hit, increase number of STACKS by 3.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000203.png" id="sr203" alt="203" onclick="makeskill('203', 'ss4s', '[Pure Sister] Strea', 100, 10, '1H Sword', 16, '-', '-', '-', 'Slash/Dark', '24', '660% damage (Single Foe) [Front/Long/Mid] / [Enhance Defense 4/Buff] Defense +15% for 15sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000202.png" id="sr202" alt="202" onclick="makeskill('202', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000201.png" id="sr201" alt="201" onclick="makeskill('201', 'ss4s', '[Flashing Thrust] Asuna', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust/Holy', '26', '660% damage (Single Foe) [Front/Arc/Mid] / [Bonus] All the Stack Buff effected to the enemy will -2 in numbers of Stacks (Will not be below 0)')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000200.png" id="sr200" alt="200" onclick="makeskill('200', 'ss4s', '[Total Victory] Yuuki', 100, 10, '1H Sword', 16, '-', '-', '-', 'Slash/Earth', '20', '630% damage (All Foes) [Center/Arc/Mid] / [Enhance Attack 4/Buff] Attack +10% for 10sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000199.png" id="sr199" alt="199" onclick="makeskill('199', 'ss4s', '[Holiday Moment] Sachi', 100, 10, '1H Club', 16, '-', '-', '-', 'Blunt/Dark', '26', '720% damage (3x hit/All Foes) [Front/Arc/Mid] / [Bonus] Additional damage to enemy of 20% own current HP.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000198.png" id="sr198" alt="198" onclick="makeskill('198', 'a4s', '[Cool Beauty] Sinon', 100, 10, 'Passive', 8, '45', '30', '1750', '-', '-', '[Break Attack 4] ATK +35% to enemies when using break')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000196.png" id="sr196" alt="196" onclick="makeskill('196', 'a4s', '[Gentle and Firm] Sachi', 100, 10, 'Passive', 8, '52', '36', '1250', '-', '-', '[Evasion 4] Evasion rate +1-% *It will not be activated with focus attack. / [Counter 4] When evading, +10% critical rate for 5 sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000195.png" id="sr195" alt="195" onclick="makeskill('195', 'ss4s', '[Flash Thrust] Asuna', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust/Fire', '24', '800% damage (5x hit/All Foes) [Front/Arc/Mid] / [Bonus] Additional damage according to number of HITs')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000194.png" id="sr194" alt="194" onclick="makeskill('194', 'ss4s', '[Summer Shot] Leefa', 100, 10, '2H Spear', 16, '-', '-', '-', 'Slash/Earth', '26', '500% damage (All Foes) [Front/Arc/Mid] / [Bonus] Critical damage +100%.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000193.png" id="sr193" alt="193" onclick="makeskill('193', 'ss4s', '[Summer Drink] Silica', 100, 10, 'Dagger', 16, '-', '-', '-', 'Slash/Water', '22', '680% damage (3x hit/All Foes) [Front/Arc/Mid] / [Poison/Debuff] It will Poison (Stack 3) at specific rate for 30sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000192.png" id="sr192" alt="192" onclick="makeskill('192', 'ss4s', '[Starry Summer Time] Lisbeth', 100, 10, '1H Club', 16, '-', '-', '-', 'Blunt/Fire', '30', '620% damage (All Foes) [Front/Arc/Mid] / [Healing 4/Buff] Slowly recovering its own HP for 60 sec. (1.5%/3sec) When using switch, it also has effects on party members.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000191.png" id="sr191" alt="191" onclick="makeskill('191', 'ss4s', '[Welcome Summer!] Yuuki', 100, 10, '1H Sword', 16, '-', '-', '-', 'Slash/Water', '18', '640% damage (All Foes) [Motion Range] / [Precise Attack 4/Buff] Critical rate +15% for 15sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000190.png" id="sr190" alt="190" onclick="makeskill('190', 'a4s', '[Summer Girl] Koharu', 100, 10, 'Passive', 16, '39', '50', '1550', '-', '-', '[Percise Attack 4] Critical rate increase 15%. / [Enhance Bleed Res. 4] Bleed resistance +60%.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000189.png" id="sr189" alt="189" onclick="makeskill('189', 'ss4s', '[Sultry Summer Night] Asuna', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust/Water', '30', '800% damage (6x hit/All Foes) [Front/Long/Mid] / [Weakness Attack 4/Buff] Critical damage +20% for 15sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000188.png" id="marchofrage" alt="188" onclick="makeskill(188, 'a4s', '[Fast Knight] Argo', 100, 10, 'Passive', 10, '62', '38', '700', '-', '-', '[Enhance Stun Res. 4] Stun resistance +60%./[Enhance Healing 4] Amount healed by plants +50%.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000187.png" id="shieldofloyalty" alt="187" onclick="makeskill(187, 'ss4s', '[Shield of Loyalty] Kizmel', 100, 10, 'Shield', 24, '-', '-', '-', 'Blunt/Fire', 26, '340% damage (Single Foe)[Front/Arc/Mid]/][Bonus] The higher your own defense, the more additional damage increases./[Burn/Staus Aliments] It will Burn (Stack 3) at a specific rate for 30sec./[Bonus] Easily draw enemy aggro.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000186.png" id="sr186" alt="186" onclick="makeskill('186', 'A4S', '[Charming Knight] Silica', 100, 10, 'Passive', 16, '27', '62', '1850', '-', '-', '[Knight\'s Vow 4] Own Max HP 0.5% recovers as monsters defeated. / [Percise Attack 4] Critical rate +15%.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000185.png" id="sr185" alt="185" onclick="makeskill('185', 'ss4s', '[Flapper Spear] Lisbeth', 100, 10, '2H Spear', 16, '-', '-', '-', 'Thrust/Fire', '18', '620% damage (3x hit/All Foes) [Center/Arc/Mid] / [Fire Element Weak 4/Debuff] Fire element damage to monster +25% for 10sec')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000184.png" id="sr184" alt="184" onclick="makeskill('184', 'a4s', '[Silent Knight] Sachi', 100, 10, 'Passive', 16, '39', '50', '1550', '-', '-', '[Enhance HP 4] Max HP +15%. / [Enhance Frostbite Res. 4] Frostbite resistance +60%.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000183.png" id="blackknight" alt="183" onclick="makeskill(183, 'ss4s', '[Black Knight] Kirito', 100, 10, '1H Sword', 16, '-', '-', '-', 'Slash/Dark', 34, '780% damage (5x hit/All Foes) [Front/Arc/Mid] / [Bonus] Own HP increases up to 5% after putting down the monsters / [Bonus] More than regular increase in switch gauge.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000182.png" id="sr182" alt="182" onclick="makeskill('182', 'a4s', '[Bouquet Toss] Koharu', 100, 10, 'Passive', 16, '46', '50', '1200', '-', '-', '[Fighting Spirit 4] While buff ATK+ is effective, DEF +25%.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000181.png" id="sr181" alt="181" onclick="makeskill('181', 'ss4s', '[First Bite] Leefa', 100, 10, 'Dagger', 24, '-', '-', '-', 'Slash/Wind', '20', '660% damage (3x hit/Single Foe) [Front/Arc/Mid] / [Bonus] 25% of player\'s reduced HP is additional damage to the enemy. [Bonus] More than regular increase in switch guage.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000180.png" id="sr180" alt="180" onclick="makeskill('180', 'a4s', '[Vigourous Macer] Lisbeth', 100, 10, 'Passive', 16, '53', '40', '1100', '-', '-', '[Opportunity For Attack 4] Critical damage +20% while enemies have ATK debuff / [Opportunity For Defense 4] Critical rate +20% while enemies have DEF debuff')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000179.png" id="sr179" alt="179" onclick="makeskill('179', 'a4s', '[Happiness Bride] Yuuki', 100, 10, 'Passive', 16, '40', '60', '1250', '-', '-', '[Crowd Control 4] Attack +8% towards the enemy in debuff (Poison, Burn, Bleed, Frostbite), damage from enemy in debuff(Poison, Burn, Bleed, Frostbite) -8%.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000178.png" id="sr178" alt="178" onclick="makeskill('178', 'ss4s', '[Shiny Bride] Asuna', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust/Wind', '26', '680% damage (All Foes) [Front/Cone/Mid] / [Combination 4/Buff] Switch damage multiplies +300% for 5sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000177.png" id="sr177" alt="177" onclick="makeskill('177', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000176.png" id="sr176" alt="176" onclick="makeskill('176', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000175.png" id="sr175" alt="175" onclick="makeskill('175', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000174.png" id="sr174" alt="174" onclick="makeskill('174', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000173.png" id="sr173" alt="173" onclick="makeskill('173', 'ss4s', '[Classy] Argo', 100, 10, '2H Axe', 24, '-', '-', '-', 'Blunt/Earth', '30', '500% damage (2x hit/Single Foe) [Front/Cone/Small] / [Bonus] 1 additional damage per Max HP of 5. / [Bonus] Amount of increase in switch guage is more than normal.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000172.png" id="sr172" alt="172" onclick="makeskill('172', 'ss4s', '[Secret Dagger] Silica', 100, 10, 'Dagger', 16, '-', '-', '-', 'Thrust/Dark', '18', '700% damage (Single Foe) [Front/Long/Wide] / [Bonus] Release enemy\'s poisonous status Aliments, and 500 additional damage for every STACK1.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000171.png" id="sr171" alt="171" onclick="makeskill('171', 'a4s', '[Miss Jovial] Yuuki', 100, 10, 'Passive', 16, '65', '20', '1000', '-', '-', '[Weakness Attack 4] Increase critical damage 20% / [Enhance Poison Res. 4] Poison Res. increase 60%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000170.png" id="sr170" alt="170" onclick="makeskill('170', 'ss4s', '[Aim High] Yuuki', 100, 10, '1H Sword', 16, '-', '-', '-', 'Slash/Dark', '32', '870% damage (10x hit/All Foes) [Front/Arc/Mid] / [Bonus] Damage 25% to enemy incease while the attack power is lowered.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000169.png" id="sr169" alt="169" onclick="makeskill('169', 'ss4s', '[Lady Style] Lisbeth', 100, 10, '1H Club', 24, '-', '-', '-', 'Blunt/Earth', '30', '800% damage (2x hit/Single Foe) [Front/Cone/Mid] / [Bonus] Becomes critical / [Bonus] More regular increase in switch guage')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000168.png" id="sr168" alt="168" onclick="makeskill('168', 'a4s', '[Miscievous Eyes] Leefa', 100, 10, 'Passive', 16, '39', '50', '1550', '-', '-', '[Enhance HP 4] Max HP increase up to 15% / [Enhance Paralysis Res. 4] Paralysis Res. increase 60%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000166.png" id="sr166" alt="166" onclick="makeskill('166', 'a4s', '[Graceful] Sachi', 100, 10, 'Passive', 8, '46', '50', '1200', '-', '-', '[Wipe out your fear 4] During the effect of dense power increase buff, attack power will increase 25%.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000165.png" id="sr165" alt="165" onclick="makeskill('165', 'ss4s', '[Black lily flash] Asuna', 100, 10, '1H Rapier', 24, '-', '-', '-', 'Thrust/Wind', '25', '700% dmg (Single Foe)［Front/Long/Mid］/ [Bonus] All damages will reduce 25%, and reflect 50% of it back to the enemy during activation')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000164.png" id="sr164" alt="164" onclick="makeskill('164', 'a4s', '[Flowerly Scented] Asuna', 100, 10, 'Passive', 16, '49', '44', '1200', '-', '-', '[Flower Fragrance 4] Critical activation increases 35% when it heals with object in the field.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000163.png" id="sr163" alt="163" onclick="makeskill('163', 'ss4s', '[Brave Beater] Kirito', 100, 10, '1H Sword', 24, '-', '-', '-', 'Slash/Fire', '26', '850% damage (4x hit/Single Foe) [Front/Cone/Mid] / [Bonus] Damage increases to 25% when the enemy is in debuff attack (poison, burn blood).')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000162.png" id="sr162" alt="162" onclick="makeskill('162', 'a4s', '[Happy Florist] Silica', 100, 10, 'Passive', 16, '49', '44', '1200', '-', '-', '[Flower Gift 4] When you are healed within field by object, ATK and DEF increase 10%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000161.png" id="blossominglancer" alt="161" onclick="makeskill(161, 'ss4s', '[Blossoming Lancer] Yuuki', 100, 10, 'Spear', 16, '-', '-', '-', 'Slash/Dark', 26, '720\% damage \(5x hit\/All Foes\) \[Front\/Long\/Mid\] \/ \[Bonus\] \-50\% damage taken while active.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000160.png" id="sr160" alt="160" onclick="makeskill('160', 'ss4s', '[Sylph of Spring Sky] Leefa', 100, 10, '1H Sword', 16, '-', '-', '-', 'Slash/Wind', '24', '580% damage (All Foes) [Front/Long/Mid] / [Wind Element Weak 4/Debuff] Increase the damage for 25% towards 10 seconds')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000159.png" id="sr159" alt="159" onclick="makeskill('159', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000158.png" id="sr158" alt="158" onclick="makeskill('158', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000157.png" id="sr157" alt="157" onclick="makeskill('157', 'ss4s', '[Magical Girl] Yuuki', 100, 10, '1H Sword', 16, '-', '-', '-', 'Slash/Dark', '28', '860% damage (2x hit/Single Foe) [Front/Cone/Mid] / [Bonus] Removes defense increase on the enemy')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000156.png" id="sr156" alt="156" onclick="makeskill('156', 'ss4s', '[Red Sorceress] Asuna', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust', '28', '650% damage (All Foes) [Front/Arc/Mid] / [Celebration 4/Buff] Your HP recovers for 30 seconds (1.5%/3sec) Effect will be removed with damage.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000155.png" id="sr155" alt="155" onclick="makeskill('155', 'a4s', '[Scarlet Faith] Asuna', 100, 10, 'Passive', 16, '39', '34', '1275', '-', '-', '[Precise Attack 4] Crit Rate increase by 9%, [Enhance Health 4] Max HP increase by 7.2%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000144.png" id="sr144" alt="144" onclick="makeskill('144', 'a4s', '[Stunning] Asuna', 100, 10, 'Passive', 16, '33', '66', '1450', '-', '-', '[Steel-Like Will 4] Damage decrease to 20% when HP is 25% or lower.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000143.png" id="sr143" alt="143" onclick="makeskill('143', 'ss4s', '[Ice-cold Glare] Mater', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust/Water', '22', '650% damage (Single Foe) [Motion Range]  / [Bonus] 50% increase with critical damage')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000142.png" id="sr142" alt="142" onclick="makeskill('142', 'a4s', '[Always Together] Silica', 100, 10, 'Passive', 16, '52', '42', '1100', '-', '-', '[Enhance Poison Aim 4] Increase the target sucess rate for Poison Debuff / [Poison Blow 4] Increase attack rate 18% when poison')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000141.png" id="sr141" alt="141" onclick="makeskill('141', 'ss4s', '[Striving Effort] Sachi', 100, 10, '2H Spear', 16, '-', '-', '-', 'Slash/Earth', '22', '620% damage (2x hit/Single Foe) [Front/Arc/Mid] / [Poison/Debuff] It will poison (Stack 3) at specific rate for 30sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000140.png" id="sr140" alt="140" onclick="makeskill('140', 'a4s', '[Hair Arrange] Lisbeth', 100, 10, 'Passive', 16, '43', '54', '1250', '-', '-', '[Blunt Protect 4] Decrease damage 15% from blunt enemy monsters.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000139.png" id="sr139" alt="139" onclick="makeskill('139', 'ss4s', '[Firm Will] Kirito', 100, 10, '1H Sword', 16, '-', '-', '-', 'Slash/Wind', '24', '650% damage (Single Foe) [Front/Long/Mid] / [Parry 4] When the target is hit using Switch, damage recieved decreases by 50%. (Effect will disappear after 20sec if not activated).')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000138.png" id="sr138" alt="138" onclick="makeskill('138', 'a4s', '[Girl By The Window] Asuna', 100, 10, 'Passive', 16, '45', '52', '1200', '-', '-', '[Resuscitation 4] As HP is below 50%, critical rate increases 30%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000137.png" id="sr137" alt="137" onclick="makeskill('137', 'ss4s', '[Loyal Hammer] Koharu', 100, 10, '1H Club', 16, '-', '-', '-', 'Blunt/Water', '36', '600% damage (Single Foe) [Front/Arc/Mid-Range] / [Mark/Debuff] damage will double the next attack (Also affects party members)')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000136.png" id="sr136" alt="136" onclick="makeskill('136', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000135.png" id="sr135" alt="135" onclick="makeskill('135', 'a4s', '[Secret Joys] Yuuki', 100, 10, 'Passive', 16, '60', '36', '850', '-', '-', '[Combination 4] Skill\'s power is added +100% when used in switch.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000134.png" id="sr134" alt="134" onclick="makeskill('134', 'ss4s', '[Golden Hair Guardian] Leefa', 100, 10, '2H Axe', 16, '-', '-', '-', 'Slash/Wind', '30', '700% damage (Single Foe) [Front/Long/Mid] / [Bonus] When activated from switch and hit, player\'s HP will recover maximum of 10%. / [Bonus] More regular increase in switch guage')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000133.png" id="sr133" alt="133" onclick="makeskill('133', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000132.png" id="sr132" alt="132" onclick="makeskill('132', 'ss4s', '[Seirou Lancer] Leefa', 100, 10, '2H Spear', 16, '-', '-', '-', 'Thrust/Holy', '30', '710% damage (8x hit/All Foes) [Front/Arc/Wide] / [Bonus] Attack increase effect will be removed from enemy')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000131.png" id="sr131" alt="131" onclick="makeskill('131', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000130.png" id="sr130" alt="130" onclick="makeskill('130', 'ss4s', '[Candy Heroine] Asuna', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust/Water', '24', '480% damage (Single Foe)［Front/Arc/Mid］/ [Bonus] When this skill directs hits, reduce all skill cooldown times by 2 seconds')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000129.png" id="sr129" alt="129" onclick="makeskill('129', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000128.png" id="sr128" alt="128" onclick="makeskill('128', 'ss4s', '[Candy Girl] Yuuki', 100, 10, '1H Sword', 16, '-', '-', '-', 'Slash/Fire', '34', '780% damage (5x hit/All Foes) [Front/Arc/Mid] / [Bonus] Own HP increases up to 5% after killing monsters / [Bonus] More increase in switch guage.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000127.png" id="sr127" alt="127" onclick="makeskill('127', 'ss4s', '[Leaping Sword] Leefa', 100, 10, '1H Sword', 16, '-', '-', '-', 'Slash/Earth', '22', '750% damage (5x hit/Single Foe) [Front/Cone/Mid] / [Bleed/Debuff] It will bleed (Stack 3) at specific rate for 30sec. / [Bonus] Easily gain enemy aggro')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000126.png" id="sr126" alt="126" onclick="makeskill('126', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000125.png" id="sr125" alt="125" onclick="makeskill('125', 'a4s', '[High Jump!] Sachi', 100, 10, 'Passive', 16, '50', '45', '1125', '-', '-', '[Enhance Bleed Aim 4] Chance of bleed UP / [Precision Bleed 4] Critical rate increases +24% on bleed')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000124.png" id="sr124" alt="124" onclick="makeskill('124', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000123.png" id="sr123" alt="123" onclick="makeskill('123', 'ss4s', '[Pure Rapier] Silica', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust/Earth', '28', '890% damage (8x hit/Single Foe) [Front/Cone/Wide] / [Oak\'s Guardian 4/Buff] Every Debuff(Paralysis, Stun, Sleep, Curse, Poison, Burn, Bleed, Frostbite) Res. will +100& for 6sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000122.png" id="sr122" alt="122" onclick="makeskill('122', 'a4s', '[Struggling] Lisbeth', 100, 10, 'Passive', 16, '42', '66', '1000', '-', '-', '[Defense Up 4] Defense +25% [Autosave 4] Defense +25% when debuffed with Paralysis, Stun, Sleep, Curse, Poison, Burn, Bleed')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000120.png" id="sr120" alt="120" onclick="makeskill('120', 'a4s', '[Earnest Choco] Koharu', 1, 0, 'Passive', 16, '9', '5', '112', '-', '-', '[Enhance Attack 4] ATK +4.04% [Raging Bull 4] Damage +4.04% on enemies with ATK debuff. [Raging Stallion 4] Damage +4.04% on enemies with DEF debuff')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000119.png" id="sr119" alt="119" onclick="makeskill('119', 'ss4s', '[Sweetheart] Asuna', 100, 10, '2H Spear', 16, '-', '-', '-', 'Thrust/Wind', '19', '600% damage (4x hit/All Foes)［Front/Cone/Mid］/ [Bonus] Defense increases critical rate')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000118.png" id="sr118" alt="118" onclick="makeskill('118', 'a4s', '[Choco Zeal] Yuuki', 100, 10, 'Passive', 16, '65', '30', '750', '-', '-', '[Persistence 4] Attack +20% at below 50% HP.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000117.png" id="sr117" alt="117" onclick="makeskill('117', 'ss4s', '[Love Sickle] Lisbeth', 100, 10, '2H Axe', 16, '-', '-', '-', 'Slash/Dark', '26', '435% damage (2x hit/All Foes) [Front/Arc/Mid] / [Bonus] When enemy HP is 50% or greater, attack ability will increase 100%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000116.png" id="sr116" alt="116" onclick="makeskill('116', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6100115.png" id="sr115" alt="115" onclick="makeskill('115', 'ss4s', '[Energetic] Asuna', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust/Dark', '16', '600% damage (All Foes) [Front/Cone/Mid] [Bleed/Status Aliments] It will bleed (Stack 3) at specific rate for 30sec')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000114.png" id="sr114" alt="114" onclick="makeskill('114', 'a4s', '[Sleepy] Yuuki', 100, 10, 'Passive', 16, '58', '34', '1000', '-', '-', '[Poisonous Blow 4] Attack +24% against poisoned enemies')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000113.png" id="sr113" alt="113" onclick="makeskill('113', 'ss4s', '[Tactician] Argo', 100, 10, '2H Axe', 16, '-', '-', '-', '-', '10', '[Super Armor 4] 40 seconds, flinch resist increase 100% / [Hands Down 4] 40 seconds, increase critical rate for a bit, as the HP increases')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000112.png" id="sr112" alt="112" onclick="makeskill('112', 'a4s', '[Long Hair] Asuna', 100, 10, '8', 8, '52', '56', '750', '-', '-', '[Enhance Defense 4] Defense +8% [Fluff Step 4] defense+ with each hit')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000111.png" id="sr111" alt="111" onclick="makeskill('111', 'ss4s', '[Courteous] Kizmel', 100, 10, '1H Sword', 16, '-', '-', '-', 'Slash', '24', '300% damage (All Foes) [Front/Long/Mid] / [Paralysis Res. 4] Para;ysis resist +80% for 10sec / [Bonus] Damage increases with defense')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000110.png" id="sr110" alt="110" onclick="makeskill('110', 'ss4s', '[Majestic] Klein', 100, 10, '2H Spear', 16, '-', '-', '-', 'Slash', '25', '800% damage (All Foes) [Front/Arc/Mid-Range] / [Enhance Defense 4/Buff] DEF +15% for 15sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000109.png" id="sr109" alt="109" onclick="makeskill('109', 'a3s', '[Heartfelt] Silica', 1, 0, 'Passive', 16, '15', '3', '45', '-', '-', '[Enhance Sleep Res. 4] Sleep resistance increases +50.1% / [Enhance Healing 4] Amount healed by plants increases +50%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000108.png" id="sr108" alt="108" onclick="makeskill('108', 'ss4s', '[Fortune] Kirito', 100, 10, '1H Club', 16, '-', '-', '-', 'Blunt', '28', '470% damage (Single Foe) [Front/Cone/Mid] / [Weak Slash 4/Debuff] Enemy slash ATK -20% for 15sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000107.png" id="sr107" alt="107" onclick="makeskill('107', 'a4s', '[Happy Time] Leefa', 100, 10, 'Passive', 16, '60', '30', '1000', '-', '-', '[Enhance Slash 4] Damage done to enemies weak to slashing +24%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000106.png" id="sr106" alt="106" onclick="makeskill('106', 'ss4s', '[Dazzling Beauty] Asuna', 80, 0, '1H Rapier', 16, '-', '-', '-', 'Thrust', '22', '500% damage(Single Foe)［Front/Long/Mid］/ [Bonus] Damage attack increases from your own switch for 5 seconds')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000105.png" id="sr105" alt="105" onclick="makeskill('105', 'a4s', '[Godhammer] Yui', 1, 0, 'Passive', 16, '13', '3', '74', '-', '-', '[Burning Blow 4] Attack against burned enemies increases 19.05%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000104.png" id="sr104" alt="104" onclick="makeskill('104', 'ss4s', '[Black Spear] Silica', 100, 10, '2H Spear', 16, '-', '-', '-', 'Thrust/Fire', '26', '630% damage (2x hit) [Front/Long/Mid] / [Burn/Debuff] It will Burn (Stack 3) at a specific rate for 30 sec')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000103.png" id="kindxmas" alt="103" onclick="makeskill('103', 'a4s', '[Kind Xmas] Asuna', 100, 10, 'Passive', 16, 70, 24 ,650, '-', '-', '\[Angel\'s Gift 4\] Restore 30 HP on critical hit \(Once per skill\)')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000102.png" id="sr102" alt="102" onclick="makeskill('102', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000101.png" id="sr101" alt="101" onclick="makeskill('101', 'a4s', '[Holy Night] Yuuki', 100, 10, 'Passive', 16, '60', '30', '1000', '-', '-', '[Enhance Blunt 4] Damage done to enemies weak to blunt +24%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000100.png" id="sr100" alt="100" onclick="makeskill('100', 'ss4s', '[Shy Xmas] Sachi', 100, 10, '1H Sword', 16, '-', '-', '-', 'Slash/Holy', '30', '870% damage (10x hit/All Foes) [Front/Arc/Mid] / [Bonus] -50% damage taken while active')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000099.png" id="sr099" alt="099" onclick="makeskill('099', 'ss4s', '[Axe Master] Leefa', 100, 10, '2H Axe', 16, '-', '-', '-', 'Blunt', '25', '800% damage (All Foes) [Front/Arc/Mid-Range] / [Bonus] Less HP increases damage')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000098.png" id="sr098" alt="098" onclick="makeskill('098', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000097.png" id="sr097" alt="097" onclick="makeskill('097', 'a2s', '[Dependable] Agil', 1, 0, 'Passive', 6, '7', '1', '21', '-', '-', '[Raging Bull 2] Damage increases +8.05% on enemies with attack debuff.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000096.png" id="sr096" alt="096" onclick="makeskill('096', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000095.png" id="sr095" alt="095" onclick="makeskill('095', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000094.png" id="sr094" alt="094" onclick="makeskill('094', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000093.png" id="sr093" alt="093" onclick="makeskill('093', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000092.png" id="sr092" alt="092" onclick="makeskill('092', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000076.png" id="sr076" alt="076" onclick="makeskill('076', 'a4s', '[Lovely Wink] Asuna', 100, 10, 'Passive', 16, '47', '21', '700', '-', '-', '[Steel-like will 4] Damage dealty to enemies weak to thrusting +4%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000075.png" id="sr075" alt="075" onclick="makeskill('075', 'a4s', '[Energetic] Silica', 100, 10, 'Passive', 8, '65', '15', '1125', '-', '-', '[Devotion 4] Attack Damage +20% when HP is > 75%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000074.png" id="sr074" alt="074" onclick="makeskill('074', 'a4s', '[Blast] Lisbeth', 100, 10, 'Passive', 8, '55', '29', '1275', '-', '-', '[Fortitude 4] Defense +50% when HP is < 25%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000073.png" id="sr073" alt="073" onclick="makeskill('073', 'a4s', '[Dark Swordsman] Kirito', 100, 10, 'Passive', 8, '67', '18', '950', '-', '-', '[Enhance Attack 4] Attack +8% [Tempo Up 4] Attack increases with number of hits')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000072.png" id="sr072" alt="072" onclick="makeskill('072', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000071.png" id="sr071" alt="071" onclick="makeskill('071', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000070.png" id="sr070" alt="070" onclick="makeskill('070', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000069.png" id="sr069" alt="069" onclick="makeskill('069', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000068.png" id="sr068" alt="068" onclick="makeskill('068', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000067.png" id="sr067" alt="067" onclick="makeskill('067', 'a3s', '[Loyal] Kizmel', 1, 0, 'Passive', 12, '11', '2', '71', '-', '-', '[Stun Resistance 3] Stun resistance increases +21.1%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000066.png" id="sr066" alt="066" onclick="makeskill('066', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000065.png" id="sr065" alt="065" onclick="makeskill('065', 'a2s', '[Aggressive Guy] Agil', 1, 0, 'Passive', 8, '8', '1', '41', '-', '-', '[Weakness Attack 2] Critical damage increases +8.05%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000064.png" id="sr064" alt="064" onclick="makeskill('064', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000063.png" id="purerequest" alt="063" onclick="makeskill('063', 'a2s', '[Pure Request] Silica', 64, 4, 'Passive', 4, '30', '11', '356', '-', '-', '[Attack Up 2] Attack damage increases +9')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000062.png" id="sr062" alt="062" onclick="makeskill('062', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000061.png" id="sr061" alt="061" onclick="makeskill('061', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000060.png" id="sr060" alt="060" onclick="makeskill('060', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000059.png" id="sr059" alt="059" onclick="makeskill('059', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000058.png" id="sr058" alt="058" onclick="makeskill('058', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000057.png" id="sr057" alt="057" onclick="makeskill('057', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000056.png" id="sr056" alt="056" onclick="makeskill('056', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000055.png" id="sr055" alt="055" onclick="makeskill('055', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000054.png" id="sr054" alt="054" onclick="makeskill('054', 'ss4s', '[Unbeatable] Agil', 100, 10, 'Shield', 16, '-', '-', '-', 'Blunt', '20', '400% damage (Single Foe) [Front/Cone/Mid-Range] / [Tough 4/Buff] Flinch resist +80% for 10sec. [Bonus] High DEF increases damage')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000053.png" id="sr053" alt="053" onclick="makeskill('053', 'ss3s', '[Pioneer] Argo', 1, 0, 'Shield', 12, '-', '-', '-', '-', '10', '[Enhance Attack 3/Buff] Attack increases +5.05% for 40 sec')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000051.png" id="sr051" alt="051" onclick="makeskill('051', 'ss2s', '[Committed] Argo', 1, 0, 'Shield', 8, '-', '-', '-', '-', '10', '[Paralysis Res. 2/Buff] Paralysis resistance increases +17.1% for 60 sec')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000050.png" id="sr050" alt="050" onclick="makeskill('050', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000049.png" id="sr049" alt="049" onclick="makeskill('049', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000048.png" id="sr048" alt="048" onclick="makeskill('048', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000047.png" id="sr047" alt="047" onclick="makeskill('047', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000046.png" id="sr046" alt="046" onclick="makeskill('046', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000045.png" id="sr045" alt="045" onclick="makeskill('045', 'ss4s', '[Full Offense] Lisbeth', 100, 10, '1H Club', 16, '-', '-', '-', 'Blunt', '28', '600% damage (All Foes) [Front/Arc/Mid] / [Weak Blunt 4/Debuff] Enemy blunt ATK -20% for 15sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000044.png" id="sr044" alt="044" onclick="makeskill('044', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000043.png" id="sr043" alt="043" onclick="makeskill('043', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000042.png" id="sr042" alt="042" onclick="makeskill('042', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000041.png" id="sr041" alt="041" onclick="makeskill('041', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000040.png" id="sr040" alt="040" onclick="makeskill('040', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000039.png" id="sr039" alt="039" onclick="makeskill('039', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000038.png" id="sr038" alt="038" onclick="makeskill('038', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000037.png" id="sr037" alt="037" onclick="makeskill('037', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000036.png" id="sr036" alt="036" onclick="makeskill('036', 'ss4s', '[Furious] Agil', 100, 10, '2H Axe', 16, '-', '-', '-', 'Blunt', '38', '1050% damage (3x hit/Single Foe) [Front/Long/Wide-Range] / [Poison 4/Debuff] Chance to poison for 30 sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000035.png" id="sr035" alt="035" onclick="makeskill('035', 'ss3s', '[Mismatch Fire] Silica', 1, 0, '2H Axe', 12, '-', '-', '-', 'Blunt', '20', '361% damage [Front/Long/Small] / [Giant Power 3/Buff] Bonus damage based on Max HP for 10 sec')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000034.png" id="sr034" alt="034" onclick="makeskill('034', 'ss3s', '[Heavy Attacker] Agil', 1, 0, '2H Axe', 12, '-', '-', '-', 'Slash', '25', '301% damage (3x hit/All Foes) [Center/Arc/Wide] / [Bonus] Easily draw enemy aggro')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000033.png" id="sr033" alt="033" onclick="makeskill('033', 'ss2s', '[Strong Smith] Agil', 1, 0, '2H Axe', 8, '-', '-', '-', '-', '10', '[Tough 2/Buff] Flinch resistance +15.15% for 30 sec')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000032.png" id="sr032" alt="032" onclick="makeskill('032', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000031.png" id="sr031" alt="031" onclick="makeskill('031', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000030.png" id="sr030" alt="030" onclick="makeskill('030', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000029.png" id="sr029" alt="029" onclick="makeskill('029', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000028.png" id="sr028" alt="028" onclick="makeskill('028', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000027.png" id="sr027" alt="027" onclick="makeskill('027', 'ss4s', '[Azure Pursuit] Sachi', 100, 10, '2H Spear', 16, '-', '-', '-', 'Thrust', '35', '860% damage (8x hit/All Foes) [Front/Cone/Wide] / [Precise Attack 4/Buff] Critical rate +15% for 10 sec')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000026.png" id="sr026" alt="026" onclick="makeskill('026', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000025.png" id="sr025" alt="025" onclick="makeskill('025', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000024.png" id="sr024" alt="024" onclick="makeskill('024', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000023.png" id="sr023" alt="023" onclick="makeskill('023', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000022.png" id="sr022" alt="022" onclick="makeskill('022', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000021.png" id="sr021" alt="021" onclick="makeskill('021', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000020.png" id="sr020" alt="020" onclick="makeskill('020', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000019.png" id="sr019" alt="019" onclick="makeskill('019', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000018.png" id="sr018" alt="018" onclick="makeskill('018', 'ss4s', '[Striking] Asuna', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust', '25', '860% damage (8x/Single Foes) [Front/Cone/Wide] [Weak Thrust 4/Debuff] Thrust damage +25% for 8sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000017.png" id="sr017" alt="017" onclick="makeskill('017', 'ss3s', '[Crimson Smile] Asuna', 90, 10, '1H Rapier', 12, '-', '-', '-', 'Thrust', '14', '485% damage (Single Foe) [Dive] / [Bonus] Critial rate increases +50% for 5 seconds')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000016.png" id="sr016" alt="016" onclick="makeskill('016', 'ss3s', '[Gracious] Asuna', 70, 0, '1H Rapier', 12, '-', '-', '-', 'Slash', '20', '410% damage (All Foes) [Front/Cone/Wide] / [Bonus] Chance to do bleed damage for 15 seconds')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000015.png" id="sr015" alt="015" onclick="makeskill('015', 'ss2s', '[Beaming Smile] Asuna', 80, 10, '1H Rapier', 8, '-', '-', '-', '-', '10', '[Weakness Attack 2/Buff] Critical damage increases +25% for 40 sec')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000014.png" id="sr014" alt="014" onclick="makeskill('014', 'ss4s', '[Melancholic] Asuna', 80, 10, '1H Rapier', 8, '-', '-', '-', 'Thrust', '10', '[Precise Attack 2/Buff] Critical rate +15% for 60 sec')" height="150" width="150">
+
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000013.png" id="sr013" alt="013" onclick="makeskill('013', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000012.png" id="sr012" alt="012" onclick="makeskill('012', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000011.png" id="sr011" alt="011" onclick="makeskill('011', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000010.png" id="sr010" alt="010" onclick="makeskill('010', 'a4s', '[Wise] Asuna', 80, 0, 'Passive', 16, '49', '29', '906', '-', '-', '[Enhance Attack 4] Attack increases +3.6% / [Enhance Defense 4] Defense Increases +3.6%')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000009.png" id="sr009" alt="009" onclick="makeskill('009', 'ss4s', '[Vivid Strike] Kirito', 100, 10, '1H Sword', 16, '-', '-', '-', 'Slash', '26', '730% damage (5x hit/Single Foe] [Front/Cone/Mid] [Bonus] +25% damage to defense debuffed foe')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000008.png" id="sr008" alt="008" onclick="makeskill('008', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000007.png" id="sr007" alt="007" onclick="makeskill('007', 'ss3s', '[Cool Swordsman] Kirito', 1, 0, '1H Sword', 12, '-', '-', '-', 'Slash', '16', '251% damage (All Foes) [Dive] / [Percise Atk 3/Buff] Critical rate increases +16.1% for 20 sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000006.png" id="sr006" alt="006" onclick="makeskill('006', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000005.png" id="sr005" alt="005" onclick="makeskill('005', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000004.png" id="sr004" alt="004" onclick="makeskill('004', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000003.png" id="sr003" alt="003" onclick="makeskill('003', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000002.png" id="sr002" alt="002" onclick="makeskill('002', 'ss-s', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000001.png" id="sr001" alt="001" onclick="makeskill('001', 'ss1s', '[First Weapon] Kirito', 1, 0, '1H Sword', 4, '-', '-', '-', 'Slash/Fire', '10', '161% damage (Single Foe) [Front/Cone/Mid]')" height="150" width="150">
+</div>
 
 <div id="skillinfo" class="modal">	<div style="display: block;margin-left: auto;margin-right: auto;" id="class" class="animate-zoom">	<div style="display: block;margin-left: auto;margin-right: auto;" id="bg" class="modal-content">	
 	<span class="close"><img src="./SAO IF ASSETS/UI/exitbtn.png"></img></span>
@@ -578,19 +990,25 @@ body {font-family: Arial, Helvetica, sans-serif;}
     <div class="skilllevel" id="skilllevel"><p></p>	</div>
     <div class="effect" id="effect"><p></p>	</div>
 </div></div></div>
+<div id="settings" class="modal2">	<div style="display: block;margin-left: auto;margin-right: auto;" id="class" class="animate-zoom">	<div style="display: block;margin-left: auto;margin-right: auto;" id="bg" class="modal-content2">
+	<span class="close"><img src="./SAO IF ASSETS/UI/exitbtn.png"></img></span>
+</div></div></div>
 <script>
 var modal = document.getElementById('skillinfo');
+var modal2 = document.getElementById('settings');
 var content = document.getElementById('content');
 var select = document.getElementById("select");
 var close = document.getElementById("close");
+var start = document.getElementById("start");
 var BGM_town_start = document.getElementById("BGM_town_start");
 var span = document.getElementsByClassName("close")[0];
+var afbtn = document.getElementsByClassName("open")[0];
 var loader = document.getElementById("loader");
 var intro = document.getElementById("intro");
 var bar = document.getElementById("bar");
 intro.src = "./SAO IF ASSETS/GIF/intro.gif?" + Math.floor((Math.random() * 1000) + 1);
 bar.src = "./SAO IF ASSETS/GIF/bar.gif?" + Math.floor((Math.random() * 1000) + 1);
-setTimeout(hideloader, 10000);
+setTimeout(hideloader, 100);
 function hideloader() {
 	loader.style.display = "none";
 }
@@ -614,6 +1032,12 @@ function makeskill(sid, bgimg, skillname, skilllevel, limitbreaks, equipment, co
     modal.style.display = "block";
 }
 
+afbtn.onclick = function() {
+		startup.play();
+	document.getElementById("class").className = "animate-zoom-out";
+    setTimeout(hideskill, 200);
+	modal2.style.display = "block";
+}
 span.onclick = function() {
 		close.play();
         document.getElementById("class").className = "animate-zoom-out";
