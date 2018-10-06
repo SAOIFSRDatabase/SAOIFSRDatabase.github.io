@@ -42,6 +42,23 @@ body {font-family: Arial, Helvetica, sans-serif;}
     text-decoration: none;
     cursor: pointer;
 }
+.close2 {
+	position:center;
+	z-index: 4;
+	left: 10px;
+	padding: 3px;
+    color: #aaaaaa;
+    float: right;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+}
+.close2:hover,
+.close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 .animate-zoom {
 	display: block;
 	position: fixed;
@@ -70,6 +87,41 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	animation: animatezoomout 0.25s
 }
 @keyframes animatezoomout {
+	from {
+		transform: scale(1)
+	}
+	to {
+		transform: scale(0)
+	}
+}
+.animate-zoom2 {
+	display: block;
+	position: fixed;
+	top: 100px;
+	width: 800px;
+    height: 450px;
+    left: 25%;
+	animation: animatezoom 0.25s
+}
+
+@keyframes animatezoom2 {
+	from {
+		transform: scale(0)
+	}
+	to {
+		transform: scale(1)
+	}
+}
+.animate-zoom-out2 {
+	display: block;
+	position: fixed;
+	top: 100px;
+	width: 800px;
+    height: 450px;
+    left: 25%;
+	animation: animatezoomout 0.25s
+}
+@keyframes animatezoomout2 {
 	from {
 		transform: scale(1)
 	}
@@ -199,7 +251,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     height: 450px;
 }
 .open {
-	background-image: url('./SAO IF ASSETS/UI/afbtn.png');
+	background-image: url('');
 	position:center;
 	left: 10px;
 	padding: 3px;
@@ -221,6 +273,63 @@ body {font-family: Arial, Helvetica, sans-serif;}
     height: 40px;
     font-weight: bold;
 }
+.idbtn {
+	position:relative;
+	font-family: yugo;
+	font-size: 16px;
+	width: 300px;
+	left: 190px;
+	top: 51px;
+}
+.idbtn2 {
+	position:relative;
+	font-family: yugo;
+	font-size: 16px;
+	width: 300px;
+	left: 400px;
+	top: -13px;
+}
+.charbtn {
+	position:relative;
+	font-family: yugo;
+	font-size: 16px;
+	width: 300px;
+	left: 535px;
+	top: -111px;
+}
+.orderbtn {
+	position:relative;
+	font-family: yugo;
+	font-size: 16px;
+	width: 300px;
+	left: 400px;
+	top: -80px;
+}
+.orderbtn2 {
+	position:relative;
+	font-family: yugo;
+	font-size: 16px;
+	width: 300px;
+	left: 190px;
+	top: -16px;
+}
+.atext {
+	position:relative;
+	font-family: yugo;
+	font-size: 16px;
+	width: 300px;
+	left: 410px;
+	top: -271px;
+}
+.dtext {
+	position:relative;
+	font-family: yugo;
+	font-size: 16px;
+	width: 300px;
+	left: 200px;
+	top: -231px;
+}
+}
 </style>
 </head>
 <body>
@@ -235,14 +344,17 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	<audio id="select">
 <source src="./SAO IF ASSETS/Audio/select.mp3" type="audio/mpeg">
 	</audio>
+	<audio id="select2">
+<source src="./SAO IF ASSETS/Audio/select2.mp3" type="audio/mpeg">
+	</audio>
 	<audio id="close">
 <source src="./SAO IF ASSETS/Audio/close.mp3" type="audio/mpeg">
 	</audio>
 	<audio id="BGM_town_start">
 <source src="./SAO IF ASSETS/Audio/BGM_town_start.mp3" type="audio/mpeg">
 	</audio>
-<img class="open" style="position: relative;width: 200px;height: 60px;" id="afbtn">
-<div id="1as_id">
+<img src="./SAO IF ASSETS/UI/afbtn.png" class="open" style="z-index: 1;position: relative;width: 200px;height: 60px;" id="afbtn" onclick="opensettings()">
+<div id="a1_id" style="">
 <h2>Testing Unit</h2>
 
 <img src="./SAO IF ASSETS/Character/sr_icon_l_6000001.png" id="sr001" alt="001" onclick="makeskill('001', 'ss1s', '[First Weapon] Kirito', 1, 0, '1H Sword', 4, '-', '-', '-', 'Slash/Fire', '10', '161% damage (Single Foe) [Front/Cone/Mid]')" height="150" width="150">
@@ -609,7 +721,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 <img src="./SAO IF ASSETS/Character/sr_icon_l_6000235.png" id="relaxingmorning" alt="235" onclick="makeskill(235, 'a4s', '[Relaxing Morning] Asuna', 100, 10, 'Passive', 8, '55', '44', '900', '-', '-', '[Weakness Attack 4] Critical Damage +20%./[Enhance Attack 3] Attack +4%.')" height="150" width="150">
 </div>
-<div id="1des_id">
+<div id="d1_id" style="display: none;">
 	<img src="./SAO IF ASSETS/Character/sr_icon_l_6000235.png" id="relaxingmorning" alt="235" onclick="makeskill(235, 'a4s', '[Relaxing Morning] Asuna', 100, 10, 'Passive', 8, '55', '44', '900', '-', '-', '[Weakness Attack 4] Critical Damage +20%./[Enhance Attack 3] Attack +4%.')" height="150" width="150">
 
 <img src="./SAO IF ASSETS/Character/sr_icon_l_6000234.png" id="floweringgarden" alt="234" onclick="makeskill(234, 'ss4s', '[Flowering Garden] Asuna', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust/Holy', 22, '740% damage (4x hit/All Foes) [Motion Range]/[Flash 4/Buff] Your own critical rate and critical damage increases 25% for 30sec. Effect will be removed with damage')" height="150" width="150">
@@ -974,6 +1086,32 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 <img src="./SAO IF ASSETS/Character/sr_icon_l_6000001.png" id="sr001" alt="001" onclick="makeskill('001', 'ss1s', '[First Weapon] Kirito', 1, 0, '1H Sword', 4, '-', '-', '-', 'Slash/Fire', '10', '161% damage (Single Foe) [Front/Cone/Mid]')" height="150" width="150">
 </div>
+<div id="a2_order" style="display: none;">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000228.png" id="cuttingedgebullet" alt="228" onclick="makeskill(228, 'ss4s', '[Cutting Edge Bullet] Kirito', 100, 10, '2H Bow', 20, '-', '-', '-', 'Thrust/Dark', 28, '860% damage (6x hit/All Foes) [Front/Long/Wide]/[Evasion 4/Buff] Evasion rate +10% for 10sec. (This will not activate with focus attack)')" height="150" width="150"> 
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000229.png" id="lightningspeed" alt="229" onclick="makeskill(229, 'ss4s', '[Lightning Speed] Asuna', 100, 10, '1H Rapier', 24, '-', '-', '-', 'Thrust/Earth', 25, '700% damage (Single Foe) [Front/Long/Mid]/][Slash Attack Down 4/Debuff] Enemy slash attack -20% for 15sec./[Bonus] 40% increase with critical damage.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000230.png" id="marchofrage" alt="230" onclick="makeskill(230, 'a4s', '[March of Rage] Leefa', 100, 10, 'Passive', 10, '65', '38', '800', '-', '-', '[Percise Attack 4] Critical rate +16%./[Tempo Up 4] Attack increases with number of hits.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000231.png" id="piercinggaze" alt="231" onclick="makeskill(231, 'ss4s', '[Piercing Gaze] Sinon', 100, 10, 'Dagger', 24, '-', '-', '-', 'Slash/Fire', 30, '700% damage (8x hit/Single Foe) [Center/Arc/Mid]/[Bonus] When the player is Status Aliments (Posion, Burn, Bleed, Frostbite, Curse, Debility), Attack +50%.')" height="150" width="150"> 
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000232.png" id="gunnerscompassion" alt="232" onclick="makeskill(232, 'ss4s', '[Gunner\'s Compassion] Sachi', 100, 10, '2H Spear', 20, '-', '-', '-', 'Slash/Wind', 22, '720% damage (All Foes) [Front/Arc/Mid]/[Weak Slash 4/Debuff] Slash elements\'s weakness damage +25% for 8sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000233.png" id="mischievoussmile" alt="233" onclick="makeskill(233, 'a4s', '[Mischievous Smile] Argo', 100, 10, 'Passive', 8, '49', '54', '950', '-', '-', '[Enhance Attack 4] Attack +10%./[Quick Turn 4] Attack +10% for 5 sec when evasion occurs.')" height="150" width="150">
+</div>
+<div id="d2_order" style="display: none;">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000233.png" id="mischievoussmile" alt="233" onclick="makeskill(233, 'a4s', '[Mischievous Smile] Argo', 100, 10, 'Passive', 8, '49', '54', '950', '-', '-', '[Enhance Attack 4] Attack +10%./[Quick Turn 4] Attack +10% for 5 sec when evasion occurs.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000232.png" id="gunnerscompassion" alt="232" onclick="makeskill(232, 'ss4s', '[Gunner\'s Compassion] Sachi', 100, 10, '2H Spear', 20, '-', '-', '-', 'Slash/Wind', 22, '720% damage (All Foes) [Front/Arc/Mid]/[Weak Slash 4/Debuff] Slash elements\'s weakness damage +25% for 8sec.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000231.png" id="piercinggaze" alt="231" onclick="makeskill(231, 'ss4s', '[Piercing Gaze] Sinon', 100, 10, 'Dagger', 24, '-', '-', '-', 'Slash/Fire', 30, '700% damage (8x hit/Single Foe) [Center/Arc/Mid]/[Bonus] When the player is Status Aliments (Posion, Burn, Bleed, Frostbite, Curse, Debility), Attack +50%.')" height="150" width="150"> 
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000230.png" id="marchofrage" alt="230" onclick="makeskill(230, 'a4s', '[March of Rage] Leefa', 100, 10, 'Passive', 10, '65', '38', '800', '-', '-', '[Percise Attack 4] Critical rate +16%./[Tempo Up 4] Attack increases with number of hits.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000229.png" id="lightningspeed" alt="229" onclick="makeskill(229, 'ss4s', '[Lightning Speed] Asuna', 100, 10, '1H Rapier', 24, '-', '-', '-', 'Thrust/Earth', 25, '700% damage (Single Foe) [Front/Long/Mid]/][Slash Attack Down 4/Debuff] Enemy slash attack -20% for 15sec./[Bonus] 40% increase with critical damage.')" height="150" width="150">
+
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000228.png" id="cuttingedgebullet" alt="228" onclick="makeskill(228, 'ss4s', '[Cutting Edge Bullet] Kirito', 100, 10, '2H Bow', 20, '-', '-', '-', 'Thrust/Dark', 28, '860% damage (6x hit/All Foes) [Front/Long/Wide]/[Evasion 4/Buff] Evasion rate +10% for 10sec. (This will not activate with focus attack)')" height="150" width="150"> 
+</div>
 
 <div id="skillinfo" class="modal">	<div style="display: block;margin-left: auto;margin-right: auto;" id="class" class="animate-zoom">	<div style="display: block;margin-left: auto;margin-right: auto;" id="bg" class="modal-content">	
 	<span class="close"><img src="./SAO IF ASSETS/UI/exitbtn.png"></img></span>
@@ -990,25 +1128,39 @@ body {font-family: Arial, Helvetica, sans-serif;}
     <div class="skilllevel" id="skilllevel"><p></p>	</div>
     <div class="effect" id="effect"><p></p>	</div>
 </div></div></div>
-<div id="settings" class="modal2">	<div style="display: block;margin-left: auto;margin-right: auto;" id="class" class="animate-zoom">	<div style="display: block;margin-left: auto;margin-right: auto;" id="bg" class="modal-content2">
-	<span class="close"><img src="./SAO IF ASSETS/UI/exitbtn.png"></img></span>
+<div id="settings" class="modal2">	<div style="display: block;margin-left: auto;margin-right: auto;" id="class2" class="animate-zoom2">	<div style="display: block;margin-left: auto;margin-right: auto;" id="bg2" class="modal-content2">
+	<span class="close2"><img src="./SAO IF ASSETS/UI/exitbtn.png"></img></span>
+	<div class="skillimg"><img id ="settingsbg" src="./SAO IF ASSETS/Skill Backgrounds/settingsbg.png" style="width:755px;height:452px;"></img>	</div>
+	<div class="charbtn" id="charimg"><p></p>	</div>
+	<div class="idbtn" id="idbtn"><p><img id ="idimg" src="./SAO IF ASSETS/UI/idbtn.png" onclick="show1a()" style=""></p>	</div>
+	<div class="idbtn2" id="idbtn2"><p><img id ="idimg3" src="./SAO IF ASSETS/UI/idbtn.png" onclick="show1d()" style=""></p>	</div>
+	<div class="orderbtn2" id="orderimg"><p><img id ="orderimg" src="./SAO IF ASSETS/UI/orderbtn.png" onclick="show2a()" style=""></p>	</div>
+	<div class="orderbtn" id="orderimg2"><p><img id ="orderimg3" src="./SAO IF ASSETS/UI/orderbtn.png" onclick="show2d()" style=""></p>	</div>
+	<div class="dtext" id="atext"><p>Ascending</p>	</div>
+	<div class="atext" id="dtext"><p>Descending</p>	</div>
+	<div class="charbtn" id="charimg"><p></p>	</div>
 </div></div></div>
 <script>
 var modal = document.getElementById('skillinfo');
 var modal2 = document.getElementById('settings');
 var content = document.getElementById('content');
+
 var select = document.getElementById("select");
 var close = document.getElementById("close");
-var start = document.getElementById("start");
+var select2 = document.getElementById("select2");
 var BGM_town_start = document.getElementById("BGM_town_start");
+
 var span = document.getElementsByClassName("close")[0];
+var span2 = document.getElementsByClassName("close2")[0];
 var afbtn = document.getElementsByClassName("open")[0];
+
 var loader = document.getElementById("loader");
 var intro = document.getElementById("intro");
 var bar = document.getElementById("bar");
+
 intro.src = "./SAO IF ASSETS/GIF/intro.gif?" + Math.floor((Math.random() * 1000) + 1);
 bar.src = "./SAO IF ASSETS/GIF/bar.gif?" + Math.floor((Math.random() * 1000) + 1);
-setTimeout(hideloader, 100);
+setTimeout(hideloader, 10);
 function hideloader() {
 	loader.style.display = "none";
 }
@@ -1033,22 +1185,54 @@ function makeskill(sid, bgimg, skillname, skilllevel, limitbreaks, equipment, co
 }
 
 afbtn.onclick = function() {
-		startup.play();
-	document.getElementById("class").className = "animate-zoom-out";
-    setTimeout(hideskill, 200);
+		select2.play();
+	document.getElementById("class2").className = "animate-zoom2";
 	modal2.style.display = "block";
 }
 span.onclick = function() {
 		close.play();
         document.getElementById("class").className = "animate-zoom-out";
         setTimeout(hideskill, 200);
+        document.getElementById("class2").className = "animate-zoom-out2";
+        setTimeout(hideskill, 200);
+}
+span2.onclick = function() {
+		close.play();
+        document.getElementById("class2").className = "animate-zoom-out2";
+        setTimeout(hideskill2, 200);
 }
 function hideskill(){
 	modal.style.display = "none";
 }
-function playmusic(){
-	BGM_town_start.play();
+function hideskill2(){
+	modal2.style.display = "none";
 }
+
+function show1a(){
+	document.getElementById("a1_id").style.display = "block";
+	document.getElementById("d1_id").style.display = "none";
+	document.getElementById("a2_order").style.display = "none";
+	document.getElementById("d2_order").style.display = "none";
+}
+function show1d(){
+	document.getElementById("a1_id").style.display = "none";
+	document.getElementById("d1_id").style.display = "block";
+	document.getElementById("a2_order").style.display = "none";
+	document.getElementById("d2_order").style.display = "none";
+}
+function show2a(){
+	document.getElementById("a1_id").style.display = "none";
+	document.getElementById("d1_id").style.display = "none";
+	document.getElementById("a2_order").style.display = "block";
+	document.getElementById("d2_order").style.display = "none";
+}
+function show2d(){
+	document.getElementById("a1_id").style.display = "none";
+	document.getElementById("d1_id").style.display = "none";
+	document.getElementById("a2_order").style.display = "none";
+	document.getElementById("d2_order").style.display = "block";
+}
+
 </script>
 
 </body>	
