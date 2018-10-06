@@ -14,6 +14,7 @@ textarea {
      <p> </p>
     <button onclick="AddSwordSkill()">Add Sword Skill</button>
     <button onclick="AddAbility()">Add Ability</button>
+    <button onclick="AddEmpty()">Add Empty</button>
         <script type="text/javascript">
         var version = 1.0;
         document.getElementById("xml").value += "<Here's Ya Skil Recads>\n";
@@ -52,6 +53,24 @@ textarea {
             var str = "<img src=\"./SAO IF ASSETS/Character/sr_icon_l_6000" + id +".png\" id=\"sr" + id + "\" alt=\"" + id + "\" onclick=\"makeskill('" + id + "', '" + bgimg + "', '" + skillname +"', " + skilllevel +", " + limitbreaks + ", '" + equipment + "', " + cost +", '" + attack + "', '" + defense + "', '" + bonushp + "', '" + element + "', '" + spcost + "', '" + effect + "')\" height=\"150\" width=\"150\">\n";
             document.getElementById("xml").value += str; 
         }
+        function AddEmpty(){
+            var id = prompt("Please enter Skill ID", "000");
+            var bgimg = "ss-s";
+            var skillname = "?";
+            var skilllevel = "?";
+            var limitbreaks = "?";
+            var equipment = "?";
+            var cost = "?";
+            var attack = "?";
+            var defense = "?";
+            var bonushp = "?";
+            var element = "?";
+            var spcost = "?";
+            var effect = "?";
+            var str = "<img src=\"./SAO IF ASSETS/Character/sr_icon_l_6000" + id +".png\" id=\"sr" + id + "\" alt=\"" + id + "\" onclick=\"makeskill('" + id + "', '" + bgimg + "', '" + skillname +"', '" + skilllevel +"', '" + limitbreaks + "', '" + equipment + "', '" + cost +"', '" + attack + "', '" + defense + "', '" + bonushp + "', '" + element + "', '" + spcost + "', '" + effect + "')\" height=\"150\" width=\"150\">\n";
+            document.getElementById("xml").value += str; 
+        }
+
 
 function toggleoutputvisibility() {
         var display = document.getElementById('output').style.display;
