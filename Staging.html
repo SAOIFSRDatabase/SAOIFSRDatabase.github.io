@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}@font-face { font-family: yugo; src: url('./SAO IF ASSETS/Font/yugothil.ttf'); } .modal { display: none; position: absolute; z-index: 1; padding-top: 100px; padding: 0; left: 50%; top: 0; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0); } .modal-content { background-image: url(""); background-color: #fefefe; margin: auto; padding-top: 0px; padding: 1px; border: 1px solid #888; width: 800px; height: 450px; } .close { position:center; left: 10px; padding: 3px; color: #aaaaaa; float: right; width: 40px; height: 40px; font-weight: bold; } .close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; } .close2 { position:center; z-index: 4; left: 10px; padding: 3px; color: #aaaaaa; float: right; width: 40px; height: 40px; font-weight: bold; } .close2:hover, .close2:focus { color: #000; text-decoration: none; cursor: pointer; } .animate-zoom { display: block; position: fixed; top: 100px; width: 800px; height: 450px; left: 25%; animation: animatezoom 0.25s } @keyframes animatezoom { from { transform: scale(0) } to { transform: scale(1) } } .animate-zoom-out { display: block; position: fixed; top: 100px; width: 800px; height: 450px; left: 25%; animation: animatezoomout 0.25s } @keyframes animatezoomout { from { transform: scale(1) } to { transform: scale(0) } } .animate-zoom2 { display: block; position: fixed; top: 100px; width: 800px; height: 450px; left: 25%; animation: animatezoom 0.25s } @keyframes animatezoom2 { from { transform: scale(0) } to { transform: scale(1) } } .animate-zoom-out2 { display: block; position: fixed; top: 100px; width: 800px; height: 450px; left: 25%; animation: animatezoomout 0.25s } @keyframes animatezoomout2 { from { transform: scale(1) } to { transform: scale(0) } } .name { position:relative; font-family: yugo; font-size: 16px; width: 300px; left: 500px; top: 30px; } .skillimg { display: block; width: 30px; height: 25px; } .cost { position:relative; font-family: yugo; font-size: 16px; width: 20px; left: 535px; top: -30px; } .equipment { position:relative; font-family: yugo; font-size: 16px; width: 300px; left: 615px; top: 156px; } .attack { position:relative; font-family: yugo; font-size: 16px; width: 300px; left: 740px; top: 49px; } .defense { position:relative; font-family: yugo; font-size: 16px; width: 300px; left: 740px; top: 44px; } .bonushp { position:relative; font-family: yugo; font-size: 16px; width: 300px; left: 740px; top: 39px; } .element { position:relative; font-family: yugo; font-size: 16px; width: 300px; left: 560px; top: 77px; } .spcost { position:relative; font-family: yugo; font-size: 16px; width: 20px; left: 560px; top: 79px; } .effect { position:relative; font-family: yugo; font-size: 15px; width: 300px; left: 495px; top: 25px; } .limitbreaks { position:relative; font-family: yugo; font-size: 16px; width: 300px; left: 583px; top: -65px; } .skilllevel { position:relative; font-family: yugo; font-size: 16px; width: 300px; left: 535px; top: -111px; } .centered { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }}
+</style></head>
+<body>
+<div id="a1_id" style="">
+<h1>Testing Unit</h1>
+
+<div id="a2_order">
+<h2>Skyblue and Magical Girl</h2>
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000157.png" id="sr157" alt="157" onclick="makeskill('157', 'ss4s', '[Magical Girl] Yuuki', 100, 10, '1H Sword', 16, '-', '-', '-', 'Slash/Dark', '28', '860% damage (2x hit/Single Foe) [Front/Cone/Mid] / [Bonus] Removes defense increase on the enemy')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000156.png" id="sr156" alt="156" onclick="makeskill('156', 'ss4s', '[Red Sorceress] Asuna', 100, 10, '1H Rapier', 16, '-', '-', '-', 'Thrust', '28', '650% damage (All Foes) [Front/Arc/Mid] / [Celebration 4/Buff] Your HP recovers for 30 seconds (1.5%/3sec) Effect will be removed with damage.')" height="150" width="150">
+<h2>Leefa Birthday</h2>
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000160.png" id="sr160" alt="160" onclick="makeskill('160', 'ss4s', '[Sylph of Spring Sky] Leefa', 100, 10, '1H Sword', 16, '-', '-', '-', 'Slash/Wind', '24', '580% damage (All Foes) [Front/Long/Mid] / [Wind Element Weak 4/Debuff] Increase the damage for 25% towards 10 seconds')" height="150" width="150">
+<h2>Spring Mirage</h2>
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000134.png" id="sr134" alt="134" onclick="makeskill('134', 'ss4s', '[Golden Hair Guardian] Leefa', 100, 10, '2H Axe', 16, '-', '-', '-', 'Slash/Wind', '30', '700% damage (Single Foe) [Front/Long/Mid] / [Bonus] When activated from switch and hit, player\'s HP will recover maximum of 10%. / [Bonus] More regular increase in switch guage')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000135.png" id="sr135" alt="135" onclick="makeskill('135', 'a4s', '[Secret Joys] Yuuki', 100, 10, 'Passive', 16, '60', '36', '850', '-', '-', '[Combination 4] Skill\'s power is added +100% when used in switch.')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000137.png" id="sr137" alt="137" onclick="makeskill('137', 'ss4s', '[Loyal Hammer] Koharu', 100, 10, '1H Club', 16, '-', '-', '-', 'Blunt/Water', '36', '600% damage (Single Foe) [Front/Arc/Mid-Range] / [Mark/Debuff] damage will double the next attack (Also affects party members)')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000138.png" id="sr138" alt="138" onclick="makeskill('138', 'a4s', '[Girl By The Window] Asuna', 100, 10, 'Passive', 16, '45', '52', '1200', '-', '-', '[Resuscitation 4] As HP is below 50%, critical rate increases 30%')" height="150" width="150">
+<h2>7 Color Girl</h2>
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000161.png" id="blossominglancer" alt="161" onclick="makeskill(161, 'ss4s', '[Blossoming Lancer] Yuuki', 100, 10, 'Spear', 16, '-', '-', '-', 'Slash/Dark', 26, '720\% damage \(5x hit\/All Foes\) \[Front\/Long\/Mid\] \/ \[Bonus\] \-50\% damage taken while active.')" height="150" width="150">
+<img src="./SAO IF ASSETS/Character/sr_icon_l_6000162.png" id="sr162" alt="162" onclick="makeskill('162', 'a4s', '[Happy Florist] Silica', 100, 10, 'Passive', 16, '49', '44', '1200', '-', '-', '[Flower Gift 4] When you are healed within field by object, ATK and DEF increase 10%')" height="150" width="150">
+
+
+
+
+
+</div>
+
+<div id="skillinfo" class="modal">	<div style="display: block;margin-left: auto;margin-right: auto;" id="class" class="animate-zoom">	<div style="display: block;margin-left: auto;margin-right: auto;" id="bg" class="modal-content">	
+	<span class="close"><img src="./SAO IF ASSETS/UI/exitbtn.png"></img></span>
+    <div class="skillimg"><img id ="skillimg" src="" style="width:465px;height:452px;"></img>	</div>
+    <div class="name" id="skillname"><p></p>	</div>
+    <div class="equipment" id="equipment"><p></p>	</div>
+    <div class="attack" id="attack"><p></p>	</div>
+    <div class="defense" id="defense"><p></p>	</div>
+    <div class="bonushp" id="bonushp"><p></p>	</div>
+    <div class="cost" id="cost"><p></p>	</div>
+    <div class="element" id="element"><p></p>	</div>
+    <div class="spcost" id="spcost"><p></p>	</div>
+    <div class="limitbreaks" id="limitbreaks"><p></p>	</div>
+    <div class="skilllevel" id="skilllevel"><p></p>	</div>
+    <div class="effect" id="effect"><p></p>	</div>
+</div></div></div>
+<script>
+
+function makeskill(sid, bgimg, skillname, skilllevel, limitbreaks, equipment, cost, attack, defense, bonushp, element, spcost, effect) {
+	document.getElementById("bg").style.backgroundImage = "url\(\'./SAO IF ASSETS/Skill Backgrounds/" + bgimg + ".png'\)";
+	document.getElementById("skillname").innerHTML = skillname;
+	document.getElementById("equipment").innerHTML = equipment;
+	document.getElementById("cost").innerHTML = cost;
+	document.getElementById("attack").innerHTML = attack;
+	document.getElementById("defense").innerHTML = defense;
+	document.getElementById("bonushp").innerHTML = bonushp;
+	document.getElementById("element").innerHTML = element;
+	document.getElementById("spcost").innerHTML = spcost;
+	document.getElementById("effect").innerHTML = effect;
+	document.getElementById("limitbreaks").innerHTML = limitbreaks;
+	document.getElementById("skilllevel").innerHTML = skilllevel;
+	document.getElementById("skillimg").src = "./SAO IF ASSETS/Character/sr_icon_l_6100" + sid + ".png";
+	document.getElementById("class").className = "animate-zoom";
+}
+
+</script>
+
+</body>	
+</html>
